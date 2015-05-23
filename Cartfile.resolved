@@ -1,0 +1,6 @@
+github "Haneke/HanekeSwift" "v0.9.1"
+github "LlamaKit/LlamaKit" "v0.6.0"
+github "raulriera/LoadingButton" "1.0.3"
+github "raulriera/UpvoteControl" "0.1.2"
+github "ishkawa/APIKit" "0.7.2"
+git "file:///Users/raulriera/Dropbox/Backup/Open Source/HuntingKit/" "c32cac46e7d02911c3f0af770028ce0747dbec4e"
