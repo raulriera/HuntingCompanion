@@ -64,17 +64,17 @@ class PostViewController: UIViewController {
         if let post = post {
             let request = ProductHunt.Endpoint.Post(post: post)
             
-            ProductHunt.sendRequest(request) { [unowned self] response in
+            ProductHunt.sendRequest(request) { [weak self] response in
                 switch response {
                 case .Success(let box):
-                    self.postVotesCollectionViewController?.votes = box.unbox.votes
+                    self?.postVotesCollectionViewController?.votes = box.unbox.votes
                     if let comments = box.unbox.comments {
-                        self.postCommentsTableViewController?.comments = comments
+                        self?.postCommentsTableViewController?.comments = comments
                     }
-                    self.post = box.unbox
+                    self?.post = box.unbox
                     
                 case .Failure(let box):
-                    self.displayError(box.unbox)
+                    self?.displayError(box.unbox)
                 }
             }
         }
